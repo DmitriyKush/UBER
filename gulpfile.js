@@ -15,7 +15,7 @@ gulp.task('styles', function(){
     return gulp.src("srs/sass/*.+(scss|sass)")
             .pipe((sass({outputStyle: 'compressed'}).on('error', sass.logError))
             .pipe(gulp.dest("src/css"))
-            .pipe(browserSync.stream());
+            .pipe(browserSync.stream())
 });
 
 gulp.task('watch', function(){
